@@ -10,8 +10,11 @@ function BookShelves(props) {
             </div>
             <div className="list-books-content">
                 <div>
-                    {props.shelves.map((shelf) =>
-                        <Bookshelf key={shelf} shelf={shelf} books={props.books.filter(book => book.shelf === shelf)}/>
+                    {props.shelves.filter(shelf => shelf !== 'none').map((shelf) =>
+                        <Bookshelf key={shelf}
+                                   shelf={shelf}
+                                   handleMove={props.handleMove}
+                                   books={props.books.filter(book => book.shelf === shelf)}/>
                     )}
                 </div>
             </div>

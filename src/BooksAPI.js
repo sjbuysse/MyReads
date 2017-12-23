@@ -354,12 +354,13 @@ export const update = (book, shelf) =>
   }).then(res => res.json())
 
 export const search = (query) =>
-  fetch(`${api}/search`, {
-    method: 'POST',
-    headers: {
-      ...headers,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ query })
-  }).then(res => res.json())
-    .then(data => data.books)
+    getAll()
+  // fetch(`${api}/search`, {
+  //   method: 'POST',
+  //   headers: {
+  //     ...headers,
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify({ query })
+  // }).then(res => res.json())
+  //   .then(data => data.books)
