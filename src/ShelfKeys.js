@@ -1,7 +1,7 @@
 const ShelfKeys = {
-    WANT_TO_READ: 'wantToRead',
-    CURRENTLY_READING: 'currentlyReading',
-    READ: 'read',
-    NONE: 'none'
+    wantToRead: 'Want to Read',
+    currentlyReading: 'Currently Reading',
+    read: 'Read',
+    none: 'None'
 }
 export default ShelfKeys;

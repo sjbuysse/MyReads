@@ -23,7 +23,7 @@ class Search extends Component {
                 <div className="search-books-results">
                     <ol className="books-grid">
                         {this.state.books.map((book) =>
-                            <li key={book.id}><Book book={book} onMove={this.props.handleMove}/></li>
+                            <li key={book.id}><Book book={book} handleMove={this.props.handleMove}/></li>
                         )}
                     </ol>
                 </div>

@@ -10,11 +10,11 @@ function BookShelves(props) {
             </div>
             <div className="list-books-content">
                 <div>
-                    {props.shelves.filter(shelf => shelf !== 'none').map((shelf) =>
-                        <Bookshelf key={shelf}
-                                   shelf={shelf}
+                    {Object.keys(props.shelves).filter(shelfKey => shelfKey !== 'none').map((shelfKey) =>
+                        <Bookshelf key={shelfKey}
+                                   shelf={props.shelves[shelfKey]}
                                    handleMove={props.handleMove}
-                                   books={props.books.filter(book => book.shelf === shelf)}/>
+                                   books={props.books.filter(book => book.shelf === shelfKey)}/>
                     )}
                 </div>
             </div>
